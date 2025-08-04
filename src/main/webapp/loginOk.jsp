@@ -15,7 +15,10 @@
 
 	if ( mid.equals("tiger") && mpw.equals("12345")) { // 참이면 로그인 성공
 		session.setAttribute("sessionFlag", "yes"); // 로그인 상태인지 아닌지만 판별
-		session.setAttribute("memberid", mid); // (arg0,arg1) arg0 = 세션 이름 (작명해야 함) arg1 = 세션에 저장할 로그인한 유저의 아이디 값
+		session.setAttribute("memberid", mid); // 로그인 정보를 메모리에 저장함
+		// (arg0,arg1) arg0 = 세션 이름 (작명해야 함) arg1 = 세션에 저장할 로그인한 유저의 아이디 값
+		long currentTime = System.currentTimeMillis();
+		session.setAttribute("currentTime", currentTime); // 로그인한 시간을 세션에 저장
 		response.sendRedirect("loginSuccess.jsp"); // 페이지 강제 이동. () 안은 강제 이동시킬 페이지 -> 로그인 성공 시 성공 페이지로 이동
 	} else {
 			System.out.println("로그인 실패");
