@@ -18,6 +18,6 @@
 		</select>
 		<input type="submit" value="장바구니에 담기">
 	</form>
-	<a href="viewCart.jsp">장바구니 바로가기</a>
+	<a href="viewCart.jsp" >장바구니 바로가기</a>
 	</body>
 </html>
